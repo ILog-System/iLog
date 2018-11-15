@@ -1,0 +1,28 @@
+<div class="container-fluid" ng-controller="LandingCtrl as landing" id="landingView">
+	
+	<div class="row">
+		<div class="col-md-4">
+			<img src="assets/img/UC logo1.png" id="logo">
+		</div>
+		<div class="col-md-6" id="frm">
+			<form name="frm" novalidate="novalidate">
+				<div class="form-group has-float-label" id="loginFrm">
+					<input type="text" 
+						   class="form-control" 
+						   id="idNumber" 
+						   placeholder="12345678">
+						   <label for="idNumber" id="idNumber">ID number</label>
+				</div>
+				<div class="form-group has-float-label" id="loginFrm">
+					<input type="password" 
+						   class="form-control" 
+						   id="password" 
+						   placeholder="••••••••">
+						   <label for="password" id="password">Password</label>
+				</div>
+				<button type="submit" class="btn btn-primary">Login</button>
+				<button type="submit" class="btn btn-secondary">Signup</button>
+			</form>
+		</div>
+	</div>
+</div>

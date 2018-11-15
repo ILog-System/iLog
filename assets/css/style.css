@@ -1,0 +1,27 @@
+/*landing page*/
+#landingView{
+	min-height: 100vh;
+	min-width: 100vw; 
+	background-color:#5FDF9B;
+}
+#logo{
+	width: 100%;
+	height: auto;
+	margin-left: 170px;
+	margin-top: 150px;
+	display: inline-block;
+}
+
+#frm{
+	margin-top: 190px;
+	padding-left: 200px;
+	display: block;
+
+}
+
+#loginFrm{
+	padding-bottom: 23px;
+	font-size: 13px;
+}
+
+/*end of landing page*/
