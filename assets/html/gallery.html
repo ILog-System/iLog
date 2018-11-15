@@ -1,0 +1,48 @@
+<div class="container-fluid" ng-controller="GalleryCtrl as gallery">
+	<div class="text-center">
+		<h1>Gallery</h1>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<input type="text" name="seacrh" placeholder="Search Image"  class="form-control" ng-model="search">
+		</div>
+		<div class="col-md-3" style="margin-top: 3px;">
+			<a href="#!/dashboard" class="btn btn-primary">Add image</a>
+			<!-- <a href="#!/dashboard" class="btn btn-primary">Add image</a> -->
+		</div>
+	</div>
+	<!-- image grid -->
+	<div  id="photos" ng-cloak style="margin-top: 30px;">
+		<div ng-repeat="url in gallery.urls | filter: search">
+			<div class="thumbnail">
+				<img ng-src="{{url.imageUrl}}"  ng-click="photo=!photo">
+				<div class="caption">
+					<!-- <p>{{url.imageName}}</p> -->
+						<button class="btn btn-sm btn-info" id="btn_del" ng-click="gallery.showPhoto(url.$id)" ng-show="photo">Details</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+		<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Meow Information</h4>
+				</div>
+				<div class="modal-body">
+					<img ng-src="{{gallery.selectedImg.imageUrl}}" class="img-responsive">
+					<p ng-if="!gallery.selectedImg.edited">{{selectedImg.imageName}}</p>
+					<input type="text" ng-model="gallery.selectedImg.imageName" ng-if="gallery.selectedImg.edited">
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-info" ng-click="gallery.savePhoto()" id="saveButton" ng-if="gallery.selectedImg.edited">Save</button>
+					<!-- <button class="btn btn-danger" ng-click="gallery.onChangeOfValue(gallery.selectedImg.imageName)" id="cancelButton" ng-if="gallery.selectedImg.edited">Cancel</button> -->
+					<button class="btn btn-info" id="editButton" ng-click="gallery.selectedImg.edited=true">Edit</button>
+					<button class="btn btn-danger" data-dismiss="modal" ng-click="gallery.deletePhoto(gallery.selectedImg)" id="deleteButton">Delete</button>
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>

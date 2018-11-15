@@ -1,0 +1,37 @@
+<div class="container-fluid" ng-controller="LoginCtrl as login">
+	<div class="row" style="margin-top: 150px;">
+		<div class="col-md-4 col-md-offset-4">
+			<form name="frm" novalidate="novalidate">
+				<div class="panel panel-default">
+					<div class="panel-heading" >
+						<div class="panel-title">Log in</div>
+					</div>
+					<div class="panel-body">
+						<div class="form-group" ng-class="{ 'has-error' : frm.email.$invalid && !frm.email.$pristine }">
+							<input type="text" 
+							name="email" 
+							class="form-control" 
+							ng-model="login.email" 
+							placeholder="email" 
+							ng-required="true" required>
+							<span style="color:red" ng-if="frm.email.$error.required && frm.email.$dirty" class="ng-hide">Enter valid email</span> 
+						</div>
+						<div class="form-group" ng-class="{ 'has-error' : frm.password.$invalid && !frm.password.$pristine }">
+							<input type="password" 
+							name="password" 
+							class="form-control" 
+							ng-model="login.password" 
+							placeholder="Password" 
+							ng-required="true" required>
+
+							<span style="color:red" ng-if="frm.password.$error.required && frm.password.$dirty" class="ng-hide"></span>  
+						</div>
+						<button class="btn btn-primary" ng-click="login.login(login.email,login.password)">Login</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+

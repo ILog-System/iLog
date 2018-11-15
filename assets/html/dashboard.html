@@ -1,0 +1,45 @@
+<div class="container-fluid" ng-controller="DashboardCtrl as dash">
+	<div class="row uploadbar">
+		<h3 class="text-center">Meow Upload</h3>
+		<div class="col-md-8 col-md-offset-2">
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" id="uploadbar">{{dash.percentage}}% Complete</div>
+			</div>
+			<div class="text-center">
+				<button ngf-select="dash.selectFile($files)" accept="image/*" class="btn btn-success">Choose file</button>
+				<button class="btn btn-success" ng-click="dash.go('/gallery')" >Go to Gallery</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<h3>Files: </h3>
+			<div ng-show="dash.displayMsg">
+				<p class="text-center">{{dash.msg}}</p>
+			</div>
+			<div class="row" ng-repeat="file in dash.fileList">
+				<div class="col-md-2">
+					<img ngf-src="file" class="thumb" width="100%">
+				</div>
+				<div class="col-md-7">
+					<p>{{file.name}}</p>
+				</div>
+				<div class="col-md-3">
+					<p>{{file.size/1000 | number:2}}KB</p>
+				</div>
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-9">
+							<input type="text" name="tags" class="form-control" placeholder="Add tags here" ng-model="dash.tags.name">
+						</div>
+						<div class="col-md-3">
+							<button class="btn btn-sm btn-success" ng-click="dash.uploadFile(file)">Upload</button>
+							<button class="btn btn-sm btn-danger" ng-click="dash.removeFile(file)">Delete</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

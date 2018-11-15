@@ -1,0 +1,173 @@
+<div class="container-fluid" ng-controller="SignupCtrl as signup">
+	<div class="row" style="margin-top: 120px;">
+		<div class="col">
+			<form name="frm" novalidate="novalidate">
+				<div class="panel panel-default" style="width: ">
+					<div class="panel-heading">
+						<div>
+							<div class="panel-title">Sign Up</div>
+						</div>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-4">
+								<div class="form-group" ng-class="{ 'has-error' : frm.firstname.$invalid && !frm.firstname.$pristine }">
+									<input type="text" 
+									name="firstname"
+									class="form-control" 
+									ng-model="signup.firstname"
+									placeholder="First name" 
+									tabindex="2"
+									ng-required="true" required>
+									<span style="color:red" ng-if="frm.firstname.$error.required && frm.firstname.$dirty" class="ng-hide">Enter valid name</span> 
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-4">
+								<div class="form-group" ng-class="{ 'has-error' : frm.lastname.$invalid && !frm.lastname.$pristine }">
+									<input type="text" 
+									name="lastname"
+									class="form-control" 
+									ng-model="signup.lastname"
+									placeholder="Last name" 
+									tabindex="2"
+									ng-required="true" required>
+									<span style="color:red" ng-if="frm.lastname.$error.required && frm.lastname.$dirty" class="ng-hide">Enter valid name</span> 
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-4">
+								<div class="form-group" ng-class="{ 'has-error' : frm.middlename.$invalid && !frm.middlename.$pristine }">
+									<div class="form-group" >
+										<input type="text" 
+										name="middlename"
+										class="form-control" 
+										ng-model="signup.middlename"
+										placeholder="Middle name" 
+										tabindex="2"
+										ng-required="true" required>
+										<span style="color:red" ng-if="frm.middlename.$error.required && frm.middlename.$dirty" class="ng-hide">Enter valid name</span> 
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-4">
+								<div class="form-group" ng-class="{ 'has-error' : frm.gender.$invalid && !frm.gender.$pristine }">
+									<input type="text" 
+									name="gender"
+									class="form-control" 
+									ng-model="signup.gender"
+									placeholder="Gender" 
+									tabindex="2"
+									ng-required="true" required>
+									<span style="color:red" ng-if="frm.gender.$error.required && frm.gender.$dirty" class="ng-hide">Enter valid name</span> 
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-4">
+								<div class="form-group" ng-class="{ 'has-error' : frm.admin.$invalid && !frm.admin.$pristine }">
+									<input type="text" 
+									name="admin"
+									class="form-control" 
+									ng-model="signup.admin"
+									placeholder="Admin" 
+									tabindex="2"
+									ng-required="true" required>
+									<span style="color:red" ng-if="frm.admin.$error.required && frm.admin.$dirty" class="ng-hide">Enter valid name</span> 
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-4">
+								<div class="form-group" ng-class="{ 'has-error' : frm.position.$invalid && !frm.position.$pristine }">
+									<input type="text" 
+									name="position"
+									class="form-control" 
+									ng-model="signup.position"
+									placeholder="Position" 
+									tabindex="2"
+									ng-required="true" required>
+									<span style="color:red" ng-if="frm.position.$error.required && frm.position.$dirty" class="ng-hide">Enter valid name</span> 
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-4">
+								<div class="form-group" ng-class="{ 'has-error' : frm.email.$invalid && !frm.email.$pristine }">
+									<input type="email" 
+									name="email"
+									class="form-control" 
+									ng-model="signup.email"
+									placeholder="Email" 
+									tabindex="2"
+									ng-required="true" required>
+									<span style="color:red" ng-if="frm.email.$error.required && frm.email.$dirty" class="ng-hide">Enter valid name</span> 
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-4">
+								<div class="form-group" ng-class="{ 'has-error' : frm.contactNumber.$invalid && !frm.contactNumber.$pristine }">
+									<input type="text" 
+									name="contactNumber"
+									class="form-control" 
+									ng-model="signup.contactNumber"
+									placeholder="Contact Number" 
+									tabindex="2"
+									ng-required="true" required>
+									<span style="color:red" ng-if="frm.contactNumber.$error.required && frm.contactNumber.$dirty" class="ng-hide">Enter valid name</span> 
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-4">
+								<div class="form-group" ng-class="{ 'has-error' : frm.password.$invalid && !frm.password.$pristine }">
+									<input type="password" 
+									name="password"
+									class="form-control" 
+									ng-model="signup.password"
+									placeholder="Password" 
+									tabindex="2"
+									ng-required="true" required>
+									<span style="color:red" ng-if="frm.password.$error.required && frm.password.$dirty" class="ng-hide">Enter valid name</span> 
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-4">
+								<div class="form-group" ng-class="{ 'has-error' : frm.confirmpassword.$invalid && !frm.confirmpassword.$pristine }">
+									<input type="password" 
+									name="confirmpassword"
+									class="form-control" 
+									ng-model="signup.confirmpassword"
+									placeholder="Confirm password" 
+									tabindex="2"
+									ng-required="true" required>
+									<span style="color:red" ng-if="frm.confirmpassword.$error.required && frm.confirmpassword.$dirty" class="ng-hide">Enter valid name</span> 
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-4">
+								<button class="btn btn-primary" ng-click="signup.addUser(signup.firstname,signup.lastname,signup.contact,signup.email,signup.password)" tabindex="2">Signup</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</form>
+		</div>
+	</div>
+</div>
+</div>
+
+		<!-- <div class="text-center">
+				<button ngf-select="signup.selectFile($files)" accept="image/*" class="btn btn-success">Choose file</button>
+		</div>
+		<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<div ng-show="signup.displayMsg">
+				<p class="text-center">{{signup.msg}}</p>
+			</div>
+			<div class="row" ng-repeat="file in signup.fileList">
+				<div class="col-md-2">
+					<img ngf-src="file" class="thumb" width="100%">
+				</div>
+			</div>
+		</div> -->
+
