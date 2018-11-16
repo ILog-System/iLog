@@ -12,7 +12,7 @@
 	display: inline-block;
 }
 
-#frm{
+#LoginFrm{
 	margin-top: 190px;
 	padding-left: 200px;
 	display: block;
@@ -25,3 +25,34 @@
 }
 
 /*end of landing page*/
+
+/*signup page*/
+
+#signupH1{
+	font-family: Century Gothic;
+	margin-top: 30px;
+	margin-left: 20px;
+}
+
+#signupFrm{
+	padding: 5px;
+}
+
+#SignupFrm{
+	padding-left: 100px;
+	margin-top: 80px;
+	display: inline-block;
+	font-family: Century Gothic;
+	font-size: 13px;
+}
+
+#signupLabel{
+	padding-top: 5px;
+	padding-left: 5px;
+	font-size: 20px;
+}
+
+#signupSelect{
+	padding-left:10px;
+	padding-top: 5px;
+}

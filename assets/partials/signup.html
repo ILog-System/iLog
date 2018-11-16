@@ -1,0 +1,101 @@
+<div class="container-fluid" ng-controller="SignupCtrl as signup">
+	<div class="row" id="signupH1">
+		<h1>Admin account</h1>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<h1>Camera view here!</h1>
+		</div>
+		<div class="col-md-6">
+			<form name="frm" novalidate="novalidate" id="SignupFrm">
+				<div class="row">
+					<div class="form-group has-float-label" id="signupFrm">
+						<input type="text" 
+						class="form-control" 
+						id="idNumber" 
+						placeholder="12345678">
+						<label for="idNumber" id="idNumber">ID number</label>
+					</div>
+					<div class="form-group has-float-label" id="signupFrm">
+						<input type="text" 
+						class="form-control" 
+						id="firstname" 
+						placeholder="Mickey">
+						<label for="firstname" id="firstname">First name</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group has-float-label" id="signupFrm">
+						<input type="text" 
+						class="form-control" 
+						id="lastname" 
+						placeholder="Mouse">
+						<label for="lastname" id="lastname">Surename</label>
+					</div>
+					<div class="form-group has-float-label" id="signupFrm">
+						<input type="text" 
+						class="form-control" 
+						id="middlename" 
+						placeholder="Lincoln">
+						<label for="middlename" id="middlename">Middle name</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group has-float-label" id="signupFrm">
+						<input type="text" 
+						class="form-control" 
+						id="admin" 
+						placeholder="ID number">
+						<label for="admin" id="admin">Admin</label>
+					</div>
+					<div class="form-group" id="signupLabel">
+						<label>Gender:</label>
+					</div>
+					<div class="form-group" 	>
+						<select class="form-control" id="gender" name="gender">
+							<option>Male</option>
+							<option>Female</option>
+						</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group has-float-label" id="signupFrm">
+						<input type="email" 
+						class="form-control" 
+						id="email" 
+						placeholder="address">
+						<label for="email" id="email">Email</label>
+					</div>
+					<div class="form-group has-float-label" id="signupFrm">
+						<input type="text" 
+						class="form-control" 
+						id="contactNumber" 
+						placeholder="Number">
+						<label for="contactNumber" id="contactNumber">Contact</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group has-float-label" id="signupFrm">
+						<input type="password" 
+						class="form-control" 
+						id="password" 
+						placeholder="••••••••">
+						<label for="password" id="password">Password</label>
+					</div>
+					<div class="form-group has-float-label" id="signupFrm">
+						<input type="password" 
+						class="form-control" 
+						id="confirmPassword" 
+						placeholder="••••••••">
+						<label for="confirmPassword" id="confirmPassword">Contact</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group" id="signupFrm">
+						<button class="btn btn-primary">Submit</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

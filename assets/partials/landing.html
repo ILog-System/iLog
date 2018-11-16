@@ -1,10 +1,10 @@
-<div class="container-fluid" ng-controller="LandingCtrl as landing" id="landingView">
+<div class="container-fluid" ng-controller="LandingCtrl as landing">
 	
-	<div class="row">
+	<div class="row" id="landingView">
 		<div class="col-md-4">
 			<img src="assets/img/UC logo1.png" id="logo">
 		</div>
-		<div class="col-md-6" id="frm">
+		<div class="col-md-6" id="LoginFrm">
 			<form name="frm" novalidate="novalidate">
 				<div class="form-group has-float-label" id="loginFrm">
 					<input type="text" 
@@ -20,9 +20,9 @@
 						   placeholder="••••••••">
 						   <label for="password" id="password">Password</label>
 				</div>
-				<button type="submit" class="btn btn-primary">Login</button>
-				<button type="submit" class="btn btn-secondary">Signup</button>
+				<button class="btn btn-primary">Login</button>
+				<button class="btn btn-secondary" ng-click="landing.go('/signup')">Signup</button>
 			</form>
 		</div>
 	</div>
-</div>
+</div> 

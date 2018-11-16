@@ -7,8 +7,13 @@
 		$stateProvider
 		.state({
 			name: 'landing',
-			url:  '/',
+			 url:  '/',
 			templateUrl: 'assets/partials/landing.html'
+		})
+		.state({
+			name: 'signup',
+			 url:  '/signup',
+			templateUrl: 'assets/partials/signup.html'
 		});
 		$urlRouterProvider.otherwise('/');
 	})
