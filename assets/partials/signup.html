@@ -1,12 +1,15 @@
 <div class="container-fluid" ng-controller="SignupCtrl as signup">
+	<div class="row" id="arrow" >
+		<img src="assets/img/go-back-left-arrow.png" ng-click="signup.go('/')">
+	</div>
 	<div class="row" id="signupH1">
 		<h1>Admin account</h1>
 	</div>
 	<div class="row">
-		<div class="col-md-6">
+		<div class="col-md-3" id="message">
 			<h1>Camera view here!</h1>
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-5">
 			<form name="frm" novalidate="novalidate" id="SignupFrm">
 				<div class="row">
 					<div class="form-group has-float-label" id="signupFrm">
@@ -51,7 +54,7 @@
 					<div class="form-group" id="signupLabel">
 						<label>Gender:</label>
 					</div>
-					<div class="form-group" 	>
+					<div class="form-group" id="signupSelect">
 						<select class="form-control" id="gender" name="gender">
 							<option>Male</option>
 							<option>Female</option>
@@ -96,6 +99,9 @@
 					</div>
 				</div>
 			</form>
+		</div>
+		<div class="col-md-4">
+			<p>hello</p>
 		</div>
 	</div>
 </div>

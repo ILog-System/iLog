@@ -1,0 +1,271 @@
+<div class="container-fluid" ng-controller="RegisterCtrl as register" onlo>
+	<div class="row" id="arrow">
+		<img src="assets/img/go-back-left-arrow.png" ng-click="signup.go('/')">
+	</div>
+	<div class="row" id="signupH1">
+		<h2>Register account</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-4" id="message1">
+				<form>
+					<div class="form-group" style="padding-top: 48px;">
+					<video id="player" width=410 height=300 controls autoplay></video>
+					<button style="font-size: 15px;" class="btn btn-secondary" id="capture">Capture</button>
+					<canvas id="canvas" width=320 height=240></canvas>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-offset-8" id="regForm">
+				<form name="frm" novalidate="novalidate" id="RegisterFrm">
+					<div class="row">
+						<h3 style="padding-left: 50px;">Personal Information</h3>
+						<h3 style="padding-left: 200px;">Schedule</h3>
+					</div>
+					<div class="row">
+						<div class="form-group has-float-label" id="registerFrm">
+							<input type="text" 
+							class="form-control" 
+							id="idNumber" 
+							placeholder="12345678" style="font-size: 15px;">
+							<label style="font-size: 15px;" for="idNumber" id="idNumber">ID number</label>
+						</div>
+						<div class="form-group has-float-label" id="registerFrm">
+							<input type="text" 
+							class="form-control" 
+							id="firstname" 
+							placeholder="Mickey" style="font-size: 15px;">
+							<label  style="font-size: 15px;" for="firstname" id="firstname">First name</label>
+						</div>
+						<div class="form-group" id="registerLabelSched">
+							<label style="padding-right: 15px;padding-left: 20px;">Days</label>
+						</div>
+						<div class="form-group" id="registerLabelSched">
+							<label style="padding-right: 10px;">Time in</label>
+						</div>
+						<div class="form-group" id="registerLabelSched1">
+							<label>Time out</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group has-float-label" id="registerFrm">
+							<input type="text" 
+							class="form-control" 
+							id="lastname" 
+							placeholder="Mouse" style="font-size: 15px;">
+							<label style="font-size: 15px;" for="lastname" id="lastname">Surename</label>
+						</div>
+						<div class="form-group has-float-label" id="registerFrm">
+							<input type="text" 
+							class="form-control" 
+							id="middlename" 
+							placeholder="Lincoln" style="font-size: 15px;">
+							<label style="font-size: 15px;" for="middlename" id="middlename">Middle name</label>
+						</div>
+						<div class="form-group" id="registerLabelSched">
+							<label style="padding-left: 15px;">Monday</label>
+						</div>
+						<div class="form-group" id="schedFrm">
+							<div class="input-group date">
+								<input type="text" class="form-control" id="time" placeholder="h/mm/ss" style="font-size: 12px;">
+								<div class="input-group-append" data-target="#time" data-toggle="time">
+									<div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group" id="schedFrm">
+							<div class="input-group date">
+								<input type="text" class="form-control" id="time2" placeholder="h/mm/ss" style="font-size: 12px;">
+								<div class="input-group-append" data-target="#time" data-toggle="time">
+									<div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group" id="registerLabel1">
+							<label>Position:</label>
+						</div>
+						<div class="form-group" id="registerSelectPos">
+							<select class="form-control" id="position" name="position">
+								<option>Faculty</option>
+								<option>Staff</option>
+								<option>Working scholar</option>
+							</select>
+						</div>
+						<div class="form-group has-float-label" id="emailFrm">
+							<input type="email" 
+							class="form-control" 
+							id="email" 
+							placeholder="address"  style="font-size: 15px;">
+							<label style="font-size: 15px;" for="email" id="email">Email</label>
+						</div>
+						<div class="form-group" id="registerLabelSched">
+							<label style="padding-left: 15px;">Tuesday</label>
+						</div> 
+						<div class="form-group" id="schedFrm">
+							<div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+								<input type="text" class="form-control" id="time3" placeholder="h/mm/ss" style="font-size: 12px;">
+								<div class="input-group-append" data-target="#time3" data-toggle="time">
+									<div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group" id="schedFrm">
+							<div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+								<input type="text" class="form-control" id="time4" placeholder="h/mm/ss" style="font-size: 12px;">
+								<div class="input-group-append" data-target="#time4" data-toggle="time">
+									<div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+								</div>
+							</div>
+						</div>	
+					</div>
+					<div class="row">
+						<div class="form-group" id="registerlabel2">
+							<label>Gender:</label>
+						</div>
+						<div class="form-group" id="registerSelect">
+							<select class="form-control" id="gender" name="gender">
+								<option>Male</option>
+								<option>Female</option>
+							</select>
+						</div>					
+						<div class="form-group has-float-label" id="registerFrm">
+							<input type="text" 
+							class="form-control" 
+							id="contactNumber" 
+							placeholder="Number" style="font-size: 15px;">
+							<label style="font-size: 15px;" for="contactNumber" id="contactNumber">Contact</label>
+						</div>
+						<div class="form-group" id="registerLabelSched2">
+							<label style="padding-left: 10px;">Wednesday</label>
+						</div>
+						<div class="form-group" id="schedFrm">
+							<div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+								<input type="text" class="form-control" id="time5" placeholder="h/mm/ss" style="font-size: 12px;">
+								<div class="input-group-append" data-target="#time5" data-toggle="time">
+									<div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group" id="schedFrm">
+							<div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+								<input type="text" class="form-control" id="time6" placeholder="h/mm/ss" style="font-size: 12px;">
+								<div class="input-group-append" data-target="#time6" data-toggle="time">
+									<div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group has-float-label" id="registerFrm">
+							<input type="password" 
+							class="form-control" 
+							id="password" 
+							placeholder="••••••••" style="font-size: 15px;">
+							<label style="font-size: 15px;" for="password" id="password">Password</label>
+						</div>
+						<div class="form-group has-float-label" id="registerFrm">
+							<input type="password" 
+							class="form-control" 
+							id="confirmPassword" 
+							placeholder="••••••••" style="font-size: 15px;">
+							<label style="font-size: 15px;" for="confirmPassword" id="confirmPassword">Confirm password</label>
+						</div>
+						<div class="form-group" id="registerLabelSched">
+							<label style="padding-left: 15px;">Thursday</label>
+						</div>
+						<div class="form-group" id="schedFrm">
+							<div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+								<input type="text" class="form-control" id="time7" placeholder="h/mm/ss" style="font-size: 12px;">
+								<div class="input-group-append" data-target="#time7" data-toggle="time">
+									<div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group" id="schedFrm">
+							<div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+								<input type="text" class="form-control" id="time8" placeholder="h/mm/ss" style="font-size: 12px;">
+								<div class="input-group-append" data-target="#time8" data-toggle="time">
+									<div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group" id="registerLabelSched">
+							<label style="padding-left:391px;">Friday</label>
+						</div>
+						<div class="form-group" id="schedFrm1">
+							<div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+								<input type="text" class="form-control" id="time9" placeholder="h/mm/ss" style="font-size: 12px;">
+								<div class="input-group-append" data-target="#time9" data-toggle="time">
+									<div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group" id="schedFrm1">
+							<div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+								<input type="text" class="form-control" id="time10" placeholder="h/mm/ss" style="font-size: 12px;">
+								<div class="input-group-append" data-target="#time10" data-toggle="time">
+									<div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group" id="registerLabelSched">
+							<label style="padding-left:391px;">Saturday</label>
+						</div>
+						<div class="form-group" id="schedFrm">
+							<div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+								<input type="text" class="form-control" id="time11" placeholder="h/mm/ss" style="font-size: 12px;">
+								<div class="input-group-append" data-target="#time11" data-toggle="time">
+									<div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group" id="schedFrm">
+							<div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+								<input type="text" class="form-control" id="time12" placeholder="h/mm/ss" style="font-size: 12px;">
+								<div class="input-group-append" data-target="#time12" data-toggle="time">
+									<div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group" id="registerFrm">
+							<button style="font-size: 15px;" class="btn btn-primary">Submit</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script>
+		const player = document.getElementById('player');
+		const canvas = document.getElementById('canvas');
+		const context = canvas.getContext('2d');
+		const captureButton = document.getElementById('capture');
+
+		const constraints = {
+			video: true,
+		};
+
+		captureButton.addEventListener('click', () => {
+    // Draw the video frame to the canvas.
+    context.drawImage(player, 0, 0, canvas.width, canvas.height);
+});
+
+
+  // Attach the video stream to the video element and autoplay.
+  navigator.mediaDevices.getUserMedia(constraints)
+  .then((stream) => {
+  	player.srcObject = stream;
+  });
+</script>
+</div>
+
+
+<!-- https://tempusdominus.github.io/bootstrap-4/Usage/ -->
+<!-- https://cdnjs.com/libraries/bootstrap-datepicker -->

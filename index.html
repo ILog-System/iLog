@@ -4,20 +4,67 @@
 	<title>iLog</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.0/dist/bootstrap-float-label.min.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap-float-label/dist/bootstrap-float-label.min.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/tempusdominus-bootstrap-4/node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/jquery-timepicker/jquery.timepicker.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
+<div id="main">
+		<nav class="navbar navbar-expand-md  fixed-top" id="nav">
+			<span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; iLog</span>
+			<div id="navbarNavDropdown" class="navbar-collapse collapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" ng-click="main.go('/')" style="cursor: pointer;">Home<span class="sr-only">(current)</span></a>
+					</li>
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" ng-hide="main.isLogin" style="cursor: pointer;" ng-click="main.go('/login')">Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" ng-hide="ctrl.isLogin" style="cursor: pointer;" ng-click="main.go('/signup')">Signup</a>
+					</li>	
+				</ul>
+			</div>
+		</nav>
+		<div class="container-fluid">
+			<div class="row">
+				<div ng-class="{'col-sm-3 col-md-2': main.isLogin}">
+					<div id="mySidenav" class="sidenav">
+						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+						<a href="#!register">Register account</a>
+						<a href="#">Employee list</a>
+						<a href="#">Account setting</a>
+					</div>
+				</div>
+				<div ng-class="{'col-sm-9 col-sm-offset-5 col-md-10 col-md-offset-2 main': main.isLogin, 'col-md-12': !main.isLogin}">
+					<ui-view></ui-view>
+				</div>
+			</div>
+		</div>
 
-
-
-	<div>
-		<ui-view></ui-view>
 	</div>
 
+	<script>
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "185px";
+			document.getElementById("main").style.marginLeft = "250px";    
+			document.getElementById("nav").style.marginLeft = "185px";    
+			document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+		}
 
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+			document.getElementById("main").style.marginLeft= "0";
+			document.getElementById("nav").style.marginLeft= "0";
+			document.body.style.backgroundColor = "white";
+		}
 
-
+		
+	</script> 
 
 
 <!-- imported scripts -->
@@ -27,12 +74,17 @@
 
 <!-- bootstrap -->
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+<script src="node_modules/moment/min/moment.min.js"></script>
+<script src="node_modules/tempusdominus-bootstrap-4/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/jquery-timepicker/jquery.timepicker.js"></script>
 <!-- angular -->
 <script src="node_modules/angular/angular.min.js"></script>
 
 <!-- angular-ui-router -->
 <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<!-- webcam -->
+<script src="node_modules/webcam/dist/webcam.min.js"></script>
 
 <!-- local scripts -->
 
@@ -40,5 +92,7 @@
 <script src="assets/js/controllers/mainctrl.js"></script>
 <script src="assets/js/controllers/landingctrl.js"></script>
 <script src="assets/js/controllers/signupctrl.js"></script>
+<script src="assets/js/controllers/homectrl.js"></script>
+<script src="assets/js/controllers/registerctrl.js"></script>
 </body>
 </html>

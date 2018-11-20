@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Float Label</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="dist/bootstrap-float-label.css"/>
+</head>
+<body style="padding: 3rem 1rem">
+  <form class="well center-block" style="max-width: 35rem">
+    <legend class="text-center">Sign up</legend>
+    <div class="form-group input-group">
+      <span class="has-float-label">
+        <input class="form-control" id="first" type="text" placeholder="Name"/>
+        <label for="first">First</label>
+      </span>
+      <span class="has-float-label">
+        <input class="form-control" id="last" type="text" placeholder="Surname"/>
+        <label for="last">Last</label>
+      </span>
+    </div>
+    <div class="form-group input-group">
+      <span class="input-group-addon">@</span>
+      <span class="has-float-label">
+        <input class="form-control" id="email" type="email" placeholder="box@example.com"/>
+        <label for="email">Email</label>
+      </span>
+    </div>
+    <div class="form-group has-float-label">
+      <input class="form-control" id="password" type="password" placeholder="••••••••"/>
+      <label for="password">Password</label>
+    </div>
+    <div class="form-group has-float-label">
+      <select class="form-control" id="country">
+        <option selected>United States</option>
+        <option>Canada</option>
+        <option>...</option>
+      </select>
+      <label for="country">Country</label>
+    </div>
+    <div class="form-group checkbox">
+      <label>
+        <input type="checkbox"/> Subscribe to newsletter
+      </label>
+    </div>
+    <div>
+      <button class="btn btn-block btn-primary" type="submit">Sign up</button>
+    </div>
+  </form>
+</body>
+</html>
