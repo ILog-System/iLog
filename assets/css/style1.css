@@ -1,0 +1,89 @@
+/*navbar*/
+
+.navbar.navbar-light.navbar-expand-md.fixed-top {
+  background-color:#8D8C8C;
+}
+
+
+#burger{
+	cursor: pointer;
+}
+/*end navbar*/
+
+/*sidenav*/
+
+#mySidenav a{
+	font-size: 20px;
+}
+
+
+/*registration*/
+
+#reg {
+  padding-top:70px;
+}
+
+#regRow {
+  padding-top:30px;
+  padding-left:10px;
+  padding-right:15px;
+}
+
+#cameraRegRow {
+  padding-top:12px;
+  padding-left:15px;
+  padding-right:10px;
+}
+
+#reg_form{
+	padding-top: 13px;
+}
+
+#reg_form2{
+	padding-top: 13px;
+}
+
+#idNumber,#firstname,#lastname,#middlename,#email,#contactNumber,#password,#confirmPassword{
+	padding: 5px;
+	font-family: "Century Gothic";
+}
+
+#forms{
+	padding-bottom: 22px;
+}
+
+#formsLast{
+	padding-bottom: 3px;
+}
+
+p{
+	font-family: "Century Gothic";
+	font-weight: bold;
+}
+
+#inpuTime{
+	font-family: "Century Gothic";
+}
+
+#timepicker1,#timepicker2,#timepicker3,#timepicker4,#timepicker5,#timepicker6,#timepicker7,#timepicker8,#timepicker9,#timepicker10,#timepicker11,#timepicker12{
+	font-size: 13px;
+}
+/*end registration*/
+
+
+/*carousel*/
+
+.carousel-inner{
+  width:100%;
+  max-height: 500px !important;
+}
+
+.tales {
+  width: 100%;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 90%;
+}
+

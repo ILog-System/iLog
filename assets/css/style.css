@@ -1,0 +1,312 @@
+/*landing page*/
+#landingView{
+	min-height: 100vh;
+	min-width: 100vw; 
+	/*background-color:#5FDF9B;*/
+}
+#logo{
+	width: 100%;
+	height: auto;
+	margin-left: 170px;
+	margin-top: 150px;
+	display: inline-block;
+}
+
+#LoginFrm{
+	margin-top: 190px;
+	padding-left: 200px;
+	display: block;
+
+}
+
+#loginFrm{
+	padding-bottom: 23px;
+	font-size: 13px;
+}
+
+/*end of landing page*/
+
+/*signup page*/
+
+#arrow{
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+#signupH1{
+	font-family: Century Gothic;
+	margin-top: 30px;
+	padding-left: 40px;
+}
+
+#message{
+	padding-top: 50px;
+	padding-left: 40px;
+}
+
+#message1{
+	padding-top: 5px;
+	padding-left: 70px;
+}
+
+
+#signupFrm{
+	padding: 5px;
+}
+
+#SignupFrm{
+	padding-left: 100px;
+	margin-top: 60px;
+	display: inline-block;
+	font-family: Century Gothic;
+	font-size: 13px;
+}
+
+#signupLabel{
+	padding-top: 5px;
+	padding-left: 5px;
+	font-size: 20px;
+}
+
+#signupSelect{
+	padding-left:15px;
+	padding-top: 5px;
+	font-size: 10px;
+}
+
+/*end of signup page*/
+
+/*dashboard page*/
+
+.navbar{
+	background-color: #8D8C8C;
+	height: auto;
+}
+
+.navbar-brand{
+	padding-left: 10px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    /*padding: 16px;*/
+}
+
+#nav{
+	transition: margin-left .5s;
+    padding: 5px;
+}
+
+#position , #gender{
+	/*padding-left: 10px;*/
+	padding-top: 5px;
+	font-size: 15px;
+	/*width: 20px;*/
+}
+
+#registerLabel{
+	padding-top: 5px;
+	/*padding-left: 5px;*/
+	font-size: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/*register*/
+
+#registerLabel1{
+	padding-top: 12px;
+	padding-left: 7px;
+	font-size: 15px;
+}
+
+#registerlabel2{
+	padding-top: 12px;
+	padding-left: 7px;
+	font-size: 15px;
+}
+
+#registerSelect{
+	/*padding-left:0px;
+	padding-right: 15px;
+	padding-top: 5px;
+	font-size: 12px;*/
+	padding-left:0px;
+	padding-top: 5px;
+}
+ 
+#registerSelect select{
+	/*padding-left:10px;
+	padding-right: 15px;
+	padding-top: 5px;
+	font-size: 10px;*/
+/*	padding-left:0px;
+	padding-right: 30px;
+	padding-top: 5px;
+	font-size: 12px;
+	padding: 0px;*/
+	padding-left:0px;
+	padding-right: 0px;
+	padding-top: 5px;
+	font-size: 15px;
+	padding: 0px;
+	width: 115px;
+}
+
+
+#registerSelectPos select{
+	padding-left:0px;
+	padding-right: 0px;
+	padding-top: 5px;
+	font-size: 15px;
+	padding: 0px;
+	width: 115px;
+}
+
+#registerSelectPos{
+	padding-left:2px;
+	padding-top: 5px;
+
+}
+
+#RegisterFrm{
+	padding-left: 30px;
+	margin-top: 30px;
+	display: inline-block;
+	font-family: Century Gothic;
+	font-size: 15px;
+}
+
+#registerFrm{
+	padding: 5px;
+	font-size: 13px;
+}
+
+#registerLabelSched{
+	padding-top: 0px;
+	padding-left: 30px;
+	font-size: 15px;
+	padding-right: 18px;
+}
+
+#registerLabelSched2{
+	padding-top: 5px;
+	padding-left: 26px;
+	font-size: 15px;
+	padding-right: 5px;
+}
+
+#registerLabelSched2 label{
+	padding-top: 5px;
+	padding-left: 23px;
+	font-size: 15px;
+	padding-right: 0px;
+}
+
+
+#registerLabelSched1 label{
+	padding-top: 5px;
+	padding-left: 80px;
+	font-size: 15px;
+	padding-right: 18px;
+}
+
+#registerH1{
+	font-family: Century Gothic;
+	margin-top: 30px;
+	margin-left: 10px;
+}
+
+
+#message1{
+	font-family: Century Gothic;
+	padding-top: 30px;
+	padding-left: 30px;
+}
+
+#emailFrm{
+	padding: 5px;
+	padding-left: 11px;
+}
+
+#regForm{
+	padding-left: 20px;
+}
+
+#registerLabelSched1{
+	padding-top: 2px;
+}
+
+#schedFrm{
+	padding-right:20px;
+	width: 150px; 
+	font-size: 12px;
+}
+
+#time , #time3 , #time6 , #time7 ,#time9 , #time11{
+	padding-right:20px;
+
+}
+
+#time2 , #time4 , #time8 , #time10 , #time12{
+	padding-left:3px;
+}
+
+#time5{
+	padding-top: 5px;
+	padding-left: 0px;
+	font-size: 15px;
+	padding-right: 10px;
+}
+
+#time5{
+	padding-top: 5px;
+	padding-left: 0px;
+	font-size: 15px;
+	padding-right: 10px;
+}
+
+
+
+#schedFrm1{
+	padding-left:20px;
+	width: 150px; 
+	font-size: 12px;
+}

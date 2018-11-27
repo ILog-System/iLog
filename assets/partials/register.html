@@ -1,0 +1,374 @@
+<div class="container-fluid" ng-controller="RegisterCtrl as register">
+	<div id="reg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12"><h2>Register account</h2></div>
+			</div>
+			<div class="row" id="cameraRegRow">
+				<div class="col-md-4">
+					<h5>Camera view<h5>
+					<!-- <div id="my_camera"></div> -->
+					<form>
+						<div class="form-group" style="padding-top: 17px;">
+							<video id="player" width=340 height=336 controls autoplay></video>
+							<button style="font-size: 15px;" class="btn btn-secondary" id="capture" onClick="take_snapshot()">Capture</button>
+							 <input type="hidden" name="image" class="image-tag">
+							<!-- <canvas id="canvas" width=320 height=240></canvas> -->
+						</div>
+						<div class="form-group">
+							<button class="btn btn-primary" ng-model="submitBtn">Submit</button>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-4">
+					<h5 style="padding-left: 85px;">Personal information<h5>
+					<form id="reg_form">
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<div class="form-group has-float-label" id="forms">
+									<input type="text" 
+									class="form-control" 
+									id="register.idNumber" 
+									ng-model="idNumber"
+									placeholder="12345678" style="font-size: 15px;padding-left: 15px;">
+									<label style="font-size: 15px;" for="idNumber" id="idNumber">ID number</label>
+								</div>
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<div class="form-group has-float-label" id="forms">
+									<input type="text" 
+									class="form-control" 
+									id="firstname" 
+									ng-model="register.firstname"
+									placeholder="Mickey" style="font-size: 15px;padding-left: 15px;">
+									<label  style="font-size: 15px;" for="firstname" id="firstname">First name</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<div class="form-group has-float-label" id="forms">
+									<input type="text" 
+									class="form-control" 
+									id="lastname" 
+									ng-model="register.lastname"
+									placeholder="Mouse" style="font-size: 15px;padding-left: 15px;">
+									<label style="font-size: 15px;" for="lastname" id="lastname">Surename</label>
+								</div>
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<div class="form-group has-float-label" id="forms">
+									<input type="text" 
+									class="form-control" 
+									id="middlename" 
+									ng-model="register.middlename"
+									placeholder="Lincoln" style="font-size: 15px;padding-left: 15px;">
+									<label style="font-size: 15px;" for="middlename" id="middlename">Middle name</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<div class="form-group" id="forms">
+									<select required class="form-control" id="position"
+									 ng-model="register.position">
+										<option value=""
+										hidden
+										>Position</option>
+
+										<!-- normal options -->
+										<option value="1">Faculty</option>
+										<option value="2">Staff</option>
+										<option value="3">Working</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<div class="form-group has-float-label" id="forms">
+									<select required class="form-control" id="gender"
+									 ng-model="register.gender">
+										<option value=""
+										hidden
+										>Gender</option>
+
+										<!-- normal options -->
+										<option value="1">Female</option>
+										<option value="2">Male</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<div class="form-group has-float-label" id="forms">
+									<input type="email" 
+									class="form-control" 
+									id="email"
+									ng-model="register.email" 
+									placeholder="address"  style="font-size: 15px;padding-left: 15px;">
+									<label style="font-size: 15px;" for="email" id="email">Email</label>
+								</div>
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<div class="form-group has-float-label" id="forms">
+									<input type="text" 
+									class="form-control" 
+									id="contactNumber" 
+									ng-model="register.contactNumber"
+									placeholder="Number" style="font-size: 15px;padding-left: 15px;">
+									<label style="font-size: 15px;" for="contactNumber" id="contactNumber">Contact</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<div class="form-group has-float-label" id="forms">
+									<input type="password" 
+									class="form-control" 
+									id="password"
+									ng-model="register.password" 
+									placeholder="••••••••" style="font-size: 15px;padding-left: 15px;">
+									<label style="font-size: 15px;" for="password" id="password">Password</label>
+								</div>
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<div class="form-group has-float-label" id="formsLast">
+									<input type="password" 
+									class="form-control" 
+									id="confirmPassword" 
+									ng-model="confirmPassword"
+									placeholder="••••••••" style="font-size: 15px;padding-left: 15px;">
+									<label style="font-size: 15px;" for="confirmPassword" id="confirmPassword">Confirm password</label>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-4">
+					<h5 style="padding-left: 105px;">Schedule<h5>
+						<form id="reg_form2">
+						<div class="row">
+							<div class="col-xs-2 col-sm-2 col-md-2">
+								<div class="form-group">                     
+									<p style="font-size: 15px;">Days</p>
+								</div>
+							</div>
+							<div class="col-xs-5 col-sm-5 col-md-5">
+								<div class="form-group" style=" padding-left: 30px;">
+									<p style="font-size: 15px;">Time in</p>
+								</div>
+							</div>
+							<div class="col-xs-5 col-sm-5 col-md-5">
+								<div class="form-group has-float-label">
+									<p style="font-size: 15px;padding-left: 20px;">Time out</p>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-2 col-sm-2 col-md-2">
+								<div class="form-group">                     
+									<p style="font-size: 15px; padding-top: 10px;">Mon</p>
+								</div>
+							</div>
+							<div class="col-xs-5 col-sm-5 col-md-5">
+								<div class="form-group" id="inpuTime">
+									<div class="input-group date bootstrap-timepicker">
+										<input id="timepicker1" type="text" ng-model="register.mondayIn" class="form-control input-small default">
+										<div class="input-group-append">
+											<div class="input-group-text"><span class="input-group-addon"><i class="fa fa-clock-o"></i></span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-5 col-sm-5 col-md-5">
+								<div class="form-group" id="inpuTime">
+									<div class="input-group date bootstrap-timepicker">
+										<input id="timepicker2" type="text" ng-model="register.mondayOut" class="form-control input-small default">
+										<div class="input-group-append">
+											<div class="input-group-text"><span class="input-group-addon"><i class="fa fa-clock-o"></i></span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-2 col-sm-2 col-md-2">
+								<div class="form-group">                     
+									<p style="font-size: 15px; padding-top: 10px;">Tue</p>
+								</div>
+							</div>
+							<div class="col-xs-5 col-sm-5 col-md-5">
+								<div class="form-group" id="inpuTime">                     
+									<div class="input-group date bootstrap-timepicker">
+										<input id="timepicker3" type="text" ng-model="register.tuesdayIn" class="form-control input-small default">
+										<div class="input-group-append">
+											<div class="input-group-text"><span class="input-group-addon"><i class="fa fa-clock-o"></i></span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-5 col-sm-5 col-md-5">
+								<div class="form-group" id="inpuTime">
+									<div class="input-group date bootstrap-timepicker">
+										<input id="timepicker4" type="text" ng-model="register.tuesdayOut" class="form-control input-small default">
+										<div class="input-group-append">
+											<div class="input-group-text"><span class="input-group-addon"><i class="fa fa-clock-o"></i></span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-2 col-sm-2 col-md-2">
+								<div class="form-group">                     
+									<p style="font-size: 15px; padding-top: 10px;">Wed</p>
+								</div>
+							</div>
+							<div class="col-xs-5 col-sm-5 col-md-5">
+								<div class="form-group" id="inpuTime">                     
+									<div class="input-group date bootstrap-timepicker">
+										<input id="timepicker5" type="text" ng-model="register.wednesdayIn"class="form-control input-small default">
+										<div class="input-group-append">
+											<div class="input-group-text"><span class="input-group-addon"><i class="fa fa-clock-o"></i></span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-5 col-sm-5 col-md-5">
+								<div class="form-group" id="inpuTime">
+									<div class="input-group date bootstrap-timepicker">
+										<input id="timepicker6" type="text" ng-model="register.wednesdayOut" class="form-control input-small default">
+										<div class="input-group-append">
+											<div class="input-group-text"><span class="input-group-addon"><i class="fa fa-clock-o"></i></span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-2 col-sm-2 col-md-2">
+								<div class="form-group">                     
+									<p style="font-size: 15px; padding-top: 10px;">Thu</p>
+								</div>
+							</div>
+							<div class="col-xs-5 col-sm-5 col-md-5">
+								<div class="form-group" id="inpuTime">                     
+									<div class="input-group date bootstrap-timepicker">
+										<input id="timepicker7" type="text" ng-model="register.thursdayIn" class="form-control input-small default">
+										<div class="input-group-append">
+											<div class="input-group-text"><span class="input-group-addon"><i class="fa fa-clock-o"></i></span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-5 col-sm-5 col-md-5">
+								<div class="form-group" id="inpuTime">
+									<div class="input-group date bootstrap-timepicker">
+										<input id="timepicker8" type="text" ng-model="register.thursdayOut" class="form-control input-small default">
+										<div class="input-group-append">
+											<div class="input-group-text"><span class="input-group-addon"><i class="fa fa-clock-o"></i></span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-2 col-sm-2 col-md-2">
+								<div class="form-group" id="inpuTime">                   
+									<p style="font-size: 15px; padding-top: 10px;">Fri</p>
+								</div>
+							</div>
+							<div class="col-xs-5 col-sm-5 col-md-5">
+								<div class="form-group" id="inpuTime">                     
+									<div class="input-group date bootstrap-timepicker">
+										<input id="timepicker9" type="text" ng-model="register.fridayIn" class="form-control input-small default">
+										<div class="input-group-append">
+											<div class="input-group-text"><span class="input-group-addon"><i class="fa fa-clock-o"></i></span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-5 col-sm-5 col-md-5">
+								<div class="form-group" id="inpuTime">
+									<div class="input-group date bootstrap-timepicker">
+										<input id="timepicker10" type="text" ng-model="register.fridayOut" class="form-control input-small default">
+										<div class="input-group-append">
+											<div class="input-group-text"><span class="input-group-addon"><i class="fa fa-clock-o"></i></span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-2 col-sm-2 col-md-2">
+								<div class="form-group">                     
+									<p style="font-size: 15px; padding-top: 10px;">Sat</p>
+								</div>
+							</div>
+							<div class="col-xs-5 col-sm-5 col-md-5">
+								<div class="form-group" id="inpuTime">                     
+									<div class="input-group date bootstrap-timepicker">
+										<input id="timepicker11" type="text" ng-model="register.saturdayIn" class="form-control input-small default">
+										<div class="input-group-append">
+											<div class="input-group-text"><span class="input-group-addon"><i class="fa fa-clock-o"></i></span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-5 col-sm-5 col-md-5">
+								<div class="form-group" id="inpuTime">
+									<div class="input-group date bootstrap-timepicker">
+										<input id="timepicker12" type="text" ng-model="register.saturdayOut" class="form-control input-small default">
+										<div class="input-group-append">
+											<div class="input-group-text"><span class="input-group-addon"><i class="fa fa-clock-o"></i></span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <script>
+		navigator.mediaDevices.getUserMedia({video: true})
+		.then(gotMedia)
+		.catch(error => console.error('getUserMedia() error:', error));
+
+		function gotMedia(mediaStream) {
+			const mediaStreamTrack = mediaStream.getVideoTracks()[0];
+			const imageCapture = new ImageCapture(mediaStreamTrack);
+			console.log(imageCapture);
+		}
+
+		const img = document.querySelector('img');
+// ...
+		imageCapture.takePhoto()
+  		.then(blob => {
+   		img.src = URL.createObjectURL(blob);
+    	img.onload = () => { URL.revokeObjectURL(this.src); }
+ 		 })
+  	.catch(error => console.error('takePhoto() error:', error));
+	</script> -->
+</div>
+
+
+<!-- https://tempusdominus.github.io/bootstrap-4/Usage/ -->
+<!-- https://cdnjs.com/libraries/bootstrap-datepicker -->
+
+
+<!-- function stopStreamedVideo(videoElem) {
+  let stream = videoElem.srcObject;
+  let tracks = stream.getTracks();
+
+  tracks.forEach(function(track) {
+    track.stop();
+  });
+
+  videoElem.srcObject = null;
+} -->
+
+
+<!-- https://jdewit.github.io/bootstrap-timepicker/ -->

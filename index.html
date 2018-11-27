@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="MainCtrl as main">
+<head>
+	<title>iLog</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap-float-label/dist/bootstrap-float-label.min.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/tempusdominus-bootstrap-4/node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/jquery-timepicker/jquery.timepicker.css">
+	<link rel="stylesheet" type="text/css" href="assets/js/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style1.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/dashboard.css">
+</head>
+<body>
+<div id="main">
+	<nav class="navbar navbar-light navbar-expand-md fixed-top" id="nav">
+		<div class="container-fluid">
+			<span id = "burger" onclick="openNav()" >&#9776;</span>
+			<a href="#" class="navbar-brand">iLog</a>
+			<button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse"
+				id="navcol-1">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" ng-click="main.go('/')" style="cursor: pointer;">Home<span class="sr-only">(current)</span></a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" ng-click="main.go('/login')" style="cursor: pointer;">Log in</a></li>
+					<li class="nav-item"><a class="nav-link" ng-click="main.go('/signup')" style="cursor: pointer;">Signup</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div ng-class="{'col-sm-3 col-md-2': main.isLogin}">
+				<div id="mySidenav" class="sidenav">
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+					<a href="#!register">Register account</a>
+					<a href="#">Employee list</a>
+					<a href="#">Account setting</a>
+				</div>
+			</div>
+			<div ng-class="{'col-sm-9 col-sm-offset-5 col-md-10 col-md-offset-2 main': main.isLogin, 'col-md-12': !main.isLogin}">
+				<ui-view></ui-view>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<script>
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "190px";
+			document.getElementById("main").style.marginLeft = "180px";    
+			document.getElementById("nav").style.marginLeft = "190px";    
+			document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+		}
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+			document.getElementById("main").style.marginLeft= "0";
+			document.getElementById("nav").style.marginLeft= "0";
+			document.body.style.backgroundColor = "white";
+		}
+
+		
+	</script> 
+
+
+<!-- imported scripts -->
+
+<!-- jquery -->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+<!-- bootstrap -->
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/bootstrap/js/dist/carousel.js"></script>
+<script src="node_modules/moment/min/moment.min.js"></script>
+<script src="node_modules/tempusdominus-bootstrap-4/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/jquery-timepicker/jquery.timepicker.js"></script>
+<script src="assets/js/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.min.js"></script>
+<!-- <script src="https://cdn.rawgit.com/download/glyphicons/0.1.0/glyphicons.js"></script> -->
+
+<!-- angular -->
+<script src="node_modules/angular/angular.min.js"></script>
+
+<!-- angular-ui-router -->
+<script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<!-- webcam -->
+<script src="node_modules/webcam/dist/webcam.min.js"></script>
+
+<!-- local scripts -->
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/controllers/mainctrl.js"></script>
+<script src="assets/js/controllers/landingctrl.js"></script>
+<script src="assets/js/controllers/signupctrl.js"></script>
+<script src="assets/js/controllers/homectrl.js"></script>
+<script src="assets/js/controllers/registerctrl.js"></script>
+</body>
+</html>
