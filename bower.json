@@ -1,0 +1,17 @@
+{
+  "name": "ilog",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "ana"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
