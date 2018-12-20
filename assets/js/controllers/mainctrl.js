@@ -13,6 +13,14 @@
 		vm.go = function ( path ) {
     			$location.path( path );
     		};
+
+
+
+$('#datepicker').datepicker({
+                    format:'mm/dd/yyyy',
+                }).datepicker("setValue",'now');
+    		
+
 	}
 
 

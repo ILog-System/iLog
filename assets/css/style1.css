@@ -14,13 +14,14 @@
 
 #mySidenav a{
 	font-size: 20px;
+  display: inline-block;
 }
 
 
 /*registration*/
 
 #reg {
-  padding-top:70px;
+  padding-top:80px;
 }
 
 #regRow {
@@ -36,7 +37,7 @@
 }
 
 #reg_form{
-	padding-top: 13px;
+	padding-top: 15px;
 }
 
 #reg_form2{
@@ -49,7 +50,7 @@
 }
 
 #forms{
-	padding-bottom: 22px;
+	padding-bottom: 25px;
 }
 
 #formsLast{
@@ -87,3 +88,10 @@ p{
     height: 90%;
 }
 
+#myCarousel{
+  width: 100%;
+}
+
+/*#regstr{
+  padding-top: 100px;
+}*/

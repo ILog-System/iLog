@@ -5,10 +5,10 @@
 	/*background-color:#5FDF9B;*/
 }
 #logo{
-	width: 100%;
-	height: auto;
-	margin-left: 170px;
-	margin-top: 150px;
+	width: 10%;
+	height: 20%;
+	/*margin-left: 170px;
+	margin-top: 150px;*/
 	display: inline-block;
 }
 
@@ -81,9 +81,16 @@
 .navbar{
 	background-color: #8D8C8C;
 	height: auto;
+	position:relative;
+    /*animation:animateleft 0.s;*/
+    transition: margin-left .5s;
 }
 
 .navbar-brand{
+	padding-left: 10px;
+}
+
+.navbar brand{
 	padding-left: 10px;
 }
 
@@ -96,17 +103,23 @@
     left: 0;
     background-color: #111;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.3s;
     padding-top: 60px;
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 8px 8px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
-    display: block;
-    transition: 0.3s;
+    display: flex;
+    float: left;
+    margin-right: 25px;
+/*  -webkit-transition: background .5s;
+    -moz-transition: background .5s;
+    -o-transition: background .5s;
+    -ms-transition: background .5s;
+    transition: background .5s;*/
 }
 
 .sidenav a:hover {
@@ -118,18 +131,21 @@
     top: 0;
     right: 25px;
     font-size: 36px;
-    margin-left: 50px;
+    margin-left: 40px;
 }
 
-#main {
-    transition: margin-left .5s;
-    /*padding: 16px;*/
+
+#main{
+	/*padding-top: 190px;*/
+	/*transition: margin-left .1s;*/
+	/*transition: right .5s;*/
+     position:relative;
+    animation:animateleft 0.5s;
+
+
 }
 
-#nav{
-	transition: margin-left .5s;
-    padding: 5px;
-}
+ @keyframes animateleft{from{left:-200px;opacity:0} to{left:0;opacity:1}
 
 #position , #gender{
 	/*padding-left: 10px;*/
@@ -310,3 +326,4 @@
 	width: 150px; 
 	font-size: 12px;
 }
+

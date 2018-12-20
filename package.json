@@ -1,31 +1,24 @@
 {
-  "name": "ilog",
+  "name": "uclm-ilsa",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ILog-System/iLog.git"
-  },
-  "author": "ana",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ILog-System/iLog/issues"
-  },
-  "homepage": "https://github.com/ILog-System/iLog#readme",
   "dependencies": {
-    "angular": "^1.7.5",
+    "angular": "^1.7.3",
     "angular-ui-router": "^1.0.20",
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^3.3.7",
     "bootstrap-float-label": "^3.0.1",
+    "bootstrap-timepicker": "^0.5.2",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "jquery-timepicker": "^1.3.3",
-    "tempusdominus-bootstrap-4": "^5.1.2",
-    "webcam": "^3.1.1"
+    "webcam": "^3.1.1",
+    "webcamjs": "^1.0.25"
   },
   "devDependencies": {},
-  "description": ""
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ana",
+  "license": "ISC"
 }
