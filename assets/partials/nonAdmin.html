@@ -1,0 +1,68 @@
+<div class="container-fluid" ng-controller="nonAdminCtrl" style="padding-top: 50px;">
+	<div class="row">
+		<div class="col-md-4 col" >
+			<h2 style="padding-top: 15px;padding-bottom: 20px;">Non-admin information</h2>
+		</div>
+		<div class="col-md-8 col-xs-8 col-sm-8" style="padding-bottom: 20px;padding-top: 20px;padding-left: 613px;">
+			<div class="form-group" style="display: inline-block;">
+				<input type="text" name="searchBox" class="form-control">
+			</div>
+			<button class="btn btn-primary" style="display: inline-block;font-size: 12px;">Search</button>
+		</div>
+	</div>
+	<fieldset style="padding: 20px;">
+		<table>
+			<tr>
+				<th>Id number</th>
+				<th>First name</th>
+				<th>Middle name</th>
+				<th>Last name</th>
+				<th>Position</th>
+				<th>Gender</th>
+				<th>Email</th>
+				<th>Contact Number</th>
+				<th>Options</th>
+			</tr>
+			<tr ng-repeat="users in list">
+				<td>{{users.idNumber}}</td>
+				<td>{{users.firstname}}</td>
+				<td>{{users.middlename}}</td>
+				<td>{{users.lastname}}</td>
+				<td>{{users.position}}</td>
+				<td>{{users.gender}}</td>
+				<td>{{users.email}}</td>
+				<td>{{users.contact}}</td>
+				<td>
+					<button class="btn btn-primary">Edit</button>
+					<button class="btn btn-secondary" style="background-color:  #bf80ff;">Sched</button>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+</div>
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  border-bottom: 5px solid red;
+  /*text-align: left;*/
+  padding: 8px;
+}
+
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 10px;
+}
+
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</style>

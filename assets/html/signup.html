@@ -1,0 +1,105 @@
+<div ng-app="app" ng-controller="SignupCtrl" class="container" style="margin-top: 180px;">
+	<div  class="col-md-4 col-md-offset-5">
+		<form name="frm" novalidate="novalidate">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<div>
+						<div class="panel-title">Sign Up</div>
+					</div>
+					<div class="panel-body">
+						<!-- row 1 -->
+						<div class="row">
+							<!-- firstname -->
+							<div class="form-group" ng-class="{ 'has-error' : frm.firstname.$invalid  && !frm.firstname.$pristine}">
+								<input type="text"
+								name="firstname" 
+								class="form-control" 
+								ng-model="signup.firstname" 
+								placeholder="First name" 
+								ng-required="true" required>
+
+								<span style="color:red" ng-if="frm.firstname.$error.required && frm.firstname.$dirty" class="ng-hide"></span> 
+							</div>				
+						</div>
+
+						<div class="row">
+							<!-- lastname -->
+							<div class="form-group" ng-class="{ 'has-error' : frm.lastname.$invalid  && !frm.lastname.$pristine}">
+								<input type="text"
+								name="lastname" 
+								class="form-control" 
+								ng-model="signup.lastname" 
+								placeholder="Last name" 
+								ng-required="true">
+
+								<span style="color:red" ng-if="frm.lastname.$error.required && frm.lastname.$dirty" class="ng-hide"></span> 
+							</div>							
+						</div>
+						<div class="row">
+							<!-- email -->
+							<div class="form-group" ng-class="{ 'has-error' : frm.email.$invalid && !frm.email.$pristine }">
+								<input type="text" 
+								name="email" 
+								class="form-control" 
+								ng-model="signup.email" 
+								placeholder="email" 
+								ng-required="true" required>
+								<span style="color:red" ng-if="frm.email.$error.required && frm.email.$dirty" class="ng-hide">Enter valid email</span> 
+							</div>
+						</div>
+						<div class="row">
+							<!-- contact -->
+							<div class="form-group" ng-class="{ 'has-error' : frm.contact.$invalid && !frm.contact.$pristine }">
+								<input type="tel" 
+								name="contact" 
+								class="form-control" 
+								ng-model="signup.contact" 
+								placeholder="Contact number"  
+								ng-required="true"
+								ng-pattern="ph_numbr">
+								<span style="color:red" ng-if="frm.email.$error.required && frm.email.$dirty" class="ng-hide">Enter valid contact number</span> 
+							</div>
+						</div>
+						<div class="row">
+							<!-- password -->
+							<div class="form-group" ng-class="{ 'has-error' : frm.password.$invalid && !frm.password.$pristine }">
+								<input type="password" 
+								name="password" 
+								class="form-control" 
+								ng-model="signup.password" 
+								placeholder="Password" 
+								ng-required="true" required>
+
+								<span style="color:red" ng-if="frm.password.$error.required && frm.password.$dirty" class="ng-hide"></span>     
+								<!-- <span style="color:red" ng-show="!passValidation && password_error_show > 0">Letters and spaces only</span> -->     
+							</div>
+						</div>
+						<div class="row">
+							<!-- confirm password -->
+							<div class="form-group" ng-class="{ 'has-error' : frm.confirmpassword.$invalid && !frm.confirmpassword.$pristine }">
+								<input type="password" 
+								name="confirmpassword" 
+								class="form-control" 
+								ng-model="signup.confirmpassword" 
+								placeholder="Confirm password" 
+								ng-required="true">
+
+								<span style="color:red" ng-if="frm.confirmpassword.$error.required && frm.confirmpassword.$dirty" class="ng-hide"></span>                    
+
+								<span style="color:red" ng-show="signup.password.length > 0 && signup.confirmpassword.length > 0 && signup.password != signup.confirmpassword">Password mismatched</span>     
+							</span>
+						</div>
+						<button class="btn btn-primary" ng-click="signup.go('/login')">Signup</button>
+					</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<input type="file" ng-model="imageSrc">
+	</div>
+</div> 
+
+<!-- <input type="file" ng-file-select="onFileSelect($files)" ng-model="imageSrc">
+ <img ng-src="{{imageSrc}}" />
+ -->
+<!-- https://codepen.io/ashishphadale/pen/zqMwVX -->

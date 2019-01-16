@@ -1,0 +1,160 @@
+<div class="container-fluid" ng-controller="EmployeeCtrl" style="padding-top: 50px;">
+	<div class="row">
+		<div class="col-md-4 col" >
+			<h2 style="padding-top: 15px;padding-bottom: 20px;">Admin information</h2>
+		</div>
+		<div class="col-md-8 col-xs-8 col-sm-8" style="padding-bottom: 20px;padding-top: 20px;padding-left: 600px;">
+			<div class="form-group" style="display: inline-block;">
+				<input type="text" name="searchBox" class="form-control">
+			</div>
+			<button class="btn btn-primary" style="display: inline-block;font-size: 12px;">Search</button>
+		</div>
+	</div>
+	<fieldset style="padding: 20px;">
+		<table>
+			<tr>
+				<th>Id number</th>
+				<th>First name</th>
+				<th>Middle name</th>
+				<th>Last name</th>
+				<th>Position</th>
+				<th>Gender</th>
+				<th>Email</th>
+				<th>Contact Number</th>
+				<th>Time in</th>
+				<th>Time out</th>
+				<th>Edit options</th>
+			</tr>
+			<tr ng-repeat="users in list track by $index">
+				<td>{{users.idNum}}</td>
+				<td>{{users.first}}</td>
+				<td>{{users.middle}}</td>
+				<td>{{users.last}}</td>
+				<td>{{users.pos}}</td>
+				<td>{{users.gen}}</td>
+				<td>{{users.email}}</td>
+				<td>{{users.con}}</td>
+				<td>{{users.timeIn}}</td>
+				<td>{{users.timeOut}}</td>
+				<td>
+					<button class="btn btn-primary" data-toggle="modal" data-target="#myModal" ng-click="selectUser(users)">Bio</button>
+					<button class="btn btn-secondary" data-toggle="modal" data-target="#myModal1" style="background-color:  #bf80ff;" ng-click="selectSched(sched)">Sched</button>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+
+
+
+<div class="modal fade" id="myModal" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h2 class="modal-title">Update bio</h2>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="row">
+							<div class="form-group" id="rowEdit">
+								<input type="text" ng-model="modalInfo.idNum" class="form-control">
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group" id="rowEdit">
+								<input type="text" ng-model="modalInfo.first" class="form-control">
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group" id="rowEdit">
+								<input type="text" ng-model="modalInfo.middle" class="form-control">
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group" id="rowEdit">
+								<input type="text" ng-model="modalInfo.last" class="form-control">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="row">
+							<div class="form-group" id="rowEdit">
+								<input type="text" ng-model="modalInfo.pos" class="form-control">
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group" id="rowEdit">
+								<input type="text" ng-model="modalInfo.gen" class="form-control">
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group" id="rowEdit">
+								<input type="text" ng-model="modalInfo.email" class="form-control">
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group" id="rowEdit">
+								<input type="text" ng-model="modalInfo.con" class="form-control">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+				<button  class="btn btn-primary">Update</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="myModal1" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h2 class="modal-title">Update schedule</h2>
+			</div>
+			<div class="modal-body">
+				<input type="text" ng-model="modalInfo.sch_id">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  border-bottom: 5px solid red;
+  /*text-align: left;*/
+  padding: 8px;
+}
+
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 10px;
+}
+
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+
+}
+
+#rowEdit{
+	padding: 7px;
+}
+
+</style>
